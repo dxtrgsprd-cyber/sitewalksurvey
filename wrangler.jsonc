@@ -1,0 +1,12 @@
+// Cloudflare Workers static-assets deploy. `npm run build` writes the static
+// site to out/, and `npx wrangler deploy` uploads it. No Worker script and no
+// secrets are needed.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sitewalksurvey",
+  "compatibility_date": "2026-07-28",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
